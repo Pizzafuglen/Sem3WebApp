@@ -1,2 +1,3 @@
-﻿@using FirstWebApp.Controllers
-<h1>@OpcUaReadController.ReadNodeValue()</h1>
+﻿@using FirstWebApp.Controllers.OpcControllers
+<h1>The current state is: @OpcUaReadController.ReadNodeValue("ns=6;s=::Program:Cube.Status.StateCurrent")</h1>
+<h1>The current speed is: @OpcUaReadController.ReadNodeValue("ns=6;s=::Program:Cube.Status.CurMachSpeed")</h1>
